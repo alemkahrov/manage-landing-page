@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'Be Vietnam';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Be Vietnam Regular'), local('BeVietnam-Regular'), url(https://fonts.gstatic.com/s/bevietnam/v1/FBVzdDflz-iPfoPuIC2iIqYn6A.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Be Vietnam';
+  font-style: normal;
+  font-weight: 500;
+  src: local('Be Vietnam Medium'), local('BeVietnam-Medium'), url(https://fonts.gstatic.com/s/bevietnam/v1/FBVwdDflz-iPfoPuIC2iKlUE_UBFJg.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Be Vietnam';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Be Vietnam Bold'), local('BeVietnam-Bold'), url(https://fonts.gstatic.com/s/bevietnam/v1/FBVwdDflz-iPfoPuIC2iKh0C_UBFJg.woff2) format('woff2');
+}
