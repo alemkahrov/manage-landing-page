@@ -46,9 +46,10 @@ const Header = () => {
           </Burger>
           <DesktopNav />
         </Flex>
-        {openModal ? (
+        <ModalNav openModal={openModal} />
+        {/* {openModal ? (
           <ModalNav openModal={openModal} />
-        ) : null}
+        ) : null} */}
       </Container>
     </HeaderNav>
   )

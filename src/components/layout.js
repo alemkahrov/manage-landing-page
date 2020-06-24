@@ -4,23 +4,19 @@ import { useStaticQuery, graphql } from "gatsby"
 
 //styled components
 import { createGlobalStyle, ThemeProvider } from "styled-components"
-import { normalize } from "styled-normalize"
 
 //import components
-// import Navbar from "../components/Navbar"
 import Header from "./navigation/Header"
 import Footer from "../components/Footer"
-// import Modal from './navigation/Modal'
-// import DesktopNav from "./navigation/DesktopNav"
 import svgPattern from '../images/bg-tablet-pattern.svg'
 
 const GlobalStyle = createGlobalStyle`
-  ${normalize}
   * {
     text-decoration: none;
     list-style: none;
     margin: 0;
     padding: 0;
+    box-sizing: inherit;
   }
 
   html {
@@ -39,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 70px -38px;
+    position: relative;
   }
 
   h1, h2, h3, h4, h5, p {

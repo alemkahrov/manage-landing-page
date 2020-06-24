@@ -6,6 +6,7 @@ import SEO from "../components/seo"
 import HomeIntro from "../components/homePage/HomeIntro"
 import HomeFeatured from "../components/homePage/HomeFeatured"
 import Cta from "../components/Cta"
+import Testimonial from "../components/Testimonial"
 
 const IndexPage = () => (
   <Layout>
@@ -13,6 +14,7 @@ const IndexPage = () => (
     <HomeIntro />
     <HomeFeatured />
     <Cta />
+    <Testimonial />
   </Layout>
 )
 

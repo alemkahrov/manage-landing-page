@@ -1,9 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'gatsby'
 import { Modal, ModalContent } from '../styles/ModalStyles'
-// import { Container, Flex } from '../styles/GlobalStyles'
-// import { Logo } from '../svg/svg-icons'
-
 
 const ModalNav = () => {
 

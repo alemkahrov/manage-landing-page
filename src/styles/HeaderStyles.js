@@ -5,7 +5,7 @@ export const HeaderNav = styled.header`
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 10;
   padding: ${({ background }) => background ? "1.4rem 0" : "2.2rem 0"};
   background: ${({ background }) => background ? "#fff" : ""};
   border-bottom: ${({ background }) => background ? "2px solid orange" : ""};
@@ -40,7 +40,8 @@ display: none;
 export const Burger = styled.div`
 display: flex;
 align-items: center;
-
+z-index: 20;
+position: relative;
  @media ${breakpoints.md} {
   display: none;
  }
@@ -60,7 +61,6 @@ align-items: center;
     height: 0.25rem;
     transform-origin: 1px;
     background: ${props => props.theme.darkBlue};
-    margin-bottom: 3px;
     :first-child {
       transform: ${({ openModal }) => openModal ? 'rotate(45deg)' : 'rotate(0)'};
     }
