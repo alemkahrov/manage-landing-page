@@ -14,7 +14,7 @@ export const HeaderNav = styled.header`
   .site-logo {
     a {
       display: flex;
-      height: 1.2rem;
+      height: 1rem;
     }
   }
 `
@@ -37,9 +37,8 @@ display: none;
   }
 `
 
-export const Burger = styled.div`
+export const StyledBurger = styled.div`
 display: flex;
-align-items: center;
 z-index: 20;
 position: relative;
  @media ${breakpoints.md} {
@@ -47,29 +46,30 @@ position: relative;
  }
  button {
   cursor: pointer;
-  width: 2rem;
-  height: 2rem;
+  width: 25px;
+  height: 25px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   border: none;
   background: transparent;
   padding: 0;
-  outline: none;
+  outline: thin-dotted;
   span {
-    width: 2rem;
-    height: 0.25rem;
-    transform-origin: 1px;
+    width: 25px;
+    height: 3px;
+    transform-origin: 2px;
     background: ${props => props.theme.darkBlue};
+    transition: opacity 0.3s, transform 0.3s;
     :first-child {
-      transform: ${({ openModal }) => openModal ? 'rotate(45deg)' : 'rotate(0)'};
+      transform: ${({ showModal }) => showModal ? 'rotate(45deg)' : 'rotate(0)'};
     }
     :nth-child(2) {
-      opacity: ${({ openModal }) => openModal ? '0' : '1'};
-      transform: ${({ openModal }) => openModal ? 'translateX(100%)' : 'translateX(0)'};
+      opacity: ${({ showModal }) => showModal ? '0' : '1'};
+      transform: ${({ showModal }) => showModal ? 'translateX(100%)' : 'translateX(0)'};
     }
     :nth-child(3) {
-      transform: ${({ openModal }) => openModal ? 'rotate(-45deg)' : 'rotate(0)'};
+      transform: ${({ showModal }) => showModal ? 'rotate(-45deg)' : 'rotate(0)'};
     }
   }
  }

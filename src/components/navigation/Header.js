@@ -1,13 +1,14 @@
 import React, { useRef, useEffect, useState } from "react"
 import { Container, Flex } from "../../styles/GlobalStyles"
-import { HeaderNav, Burger } from "../../styles/HeaderStyles"
+import { HeaderNav, StyledBurger } from "../../styles/HeaderStyles"
+// import { StyledBurger } from "../../styles/BurgerStyles"
 import DesktopNav from './DesktopNav'
 import ModalNav from '../ModalNav'
 import { Logo } from '../../svg/svg-icons'
 import { Link } from "gatsby"
 
 const Header = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const [background, setBackground] = useState(false);
 
@@ -37,19 +38,16 @@ const Header = () => {
               <Logo />
             </Link>
           </div>
-          <Burger openModal={openModal} onClick={() => setOpenModal(!openModal)}>
+          <StyledBurger showModal={showModal} onClick={() => setShowModal(!showModal)}>
             <button>
               <span></span>
               <span></span>
               <span></span>
             </button>
-          </Burger>
+          </StyledBurger>
           <DesktopNav />
         </Flex>
-        <ModalNav openModal={openModal} />
-        {/* {openModal ? (
-          <ModalNav openModal={openModal} />
-        ) : null} */}
+        <ModalNav showModal={showModal} />
       </Container>
     </HeaderNav>
   )

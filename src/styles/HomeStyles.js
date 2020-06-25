@@ -30,10 +30,10 @@ export const IntroSubTitle = styled.p`
 export const IntroSVG = styled.div`
  img {
   position: absolute;
-  bottom: -65px;
-  right: -32%;
-  height: 250px;
-  z-index: -1;
+bottom: -50px;
+right: -30%;
+height: 260px;
+z-index: -1;
  }
 `
 

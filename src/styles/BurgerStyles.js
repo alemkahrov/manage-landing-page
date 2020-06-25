@@ -14,20 +14,21 @@ const StyledBurger = styled.button`
   width: 1.8rem;
   height: 4px;
   background: ${props => props.theme.darkBlue};
+  background: ${({ showModal }) => showModal ? 'red' : 'black'};
   transform-origin: 1px;
-  transition: all 0.3s linear;
+  transition: opacity 0.3s, transform 0.3s linear;
   /* &:not(:last-child) {
    margin-bottom: 4px;
   } */
   &:nth-child(1) {
-   transform: ${({ isOpenModal }) => isOpenModal ? 'rotate(45deg)' : 'rotate(0)'};
+   transform: ${({ showModal }) => showModal ? 'rotate(45deg)' : 'rotate(0)'};
   }
   &:nth-child(2) {
-   transform: ${({ isOpenModal }) => isOpenModal ? 'translateX(100%)' : 'translateX(0)'};
-   opacity: ${({ isOpenModal }) => isOpenModal ? 0 : 1};
+   transform: ${({ showModal }) => showModal ? 'translateX(100%)' : 'translateX(0)'};
+   opacity: ${({ showModal }) => showModal ? 0 : 1};
   }
   &:nth-child(3) {
-   transform: ${({ isOpenModal }) => isOpenModal ? 'rotate(-45deg)' : 'rotate(0)'};
+   transform: ${({ showModal }) => showModal ? 'rotate(-45deg)' : 'rotate(0)'};
   }
  }
 `

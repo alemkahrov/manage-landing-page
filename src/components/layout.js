@@ -23,6 +23,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
     font-size: 16px;
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
 
   body {
