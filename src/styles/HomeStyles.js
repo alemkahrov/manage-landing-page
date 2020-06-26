@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-// INTRO SECTION
+// Intro Section
 export const IntroWrapper = styled.section`
  position: relative;
  min-height: 100vh;
@@ -76,4 +76,12 @@ export const FeaturedTitle = styled.div`
 export const FeaturedText = styled.p`
  font-size: 13px;
  color: ${props => props.theme.textColor};
+`
+
+//Testimonial Section
+export const HomeTestimonialSection = styled.section`
+  padding: 40px 0;
+  div {
+    color: #000;
+  }
 `

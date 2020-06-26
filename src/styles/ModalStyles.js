@@ -8,7 +8,7 @@ export const Modal = styled.div`
   height: 100%;
   background: linear-gradient(to bottom, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%);
   opacity: ${({ showModal }) => showModal ? '0' : '1'};
-  visibility: visible;
+  visibility: ${({ showModal }) => showModal ? 'hidden' : 'visible'};
   transform: ${({ showModal }) => showModal ? 'translateY(100%)' : 'translateY(0)'};
   transition: visibility 0s linear 0s, opacity 0.3s 0s, transform 0.3s;
 `
