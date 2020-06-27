@@ -15,6 +15,11 @@ export const HeaderNav = styled.header`
     a {
       display: flex;
       height: 1rem;
+      svg {
+        path.manage {
+          fill: ${props => props.theme.darkBlue};
+        }
+      }
     }
   }
 `
@@ -54,7 +59,7 @@ position: relative;
   border: none;
   background: transparent;
   padding: 0;
-  outline: thin-dotted;
+  outline: none;
   span {
     width: 25px;
     height: 3px;

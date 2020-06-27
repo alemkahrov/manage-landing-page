@@ -1,10 +1,12 @@
 import styled from 'styled-components'
+import svgPattern from '../images/bg-tablet-pattern.svg'
 
 // Intro Section
 export const IntroWrapper = styled.section`
  position: relative;
  min-height: 100vh;
  margin: 100px 0 60px;
+ 
 `
 export const ImageWrapper = styled.div`
  img {
@@ -40,6 +42,9 @@ z-index: -1;
 // Featured Section
 export const HomeFeaturedSection = styled.section`
  position: relative;
+ /* background-image: url(${svgPattern});
+  background-size: contain;
+  background-repeat: no-repeat; */
 `
 export const FeaturedList = styled.div`
  position: relative;
@@ -47,11 +52,14 @@ export const FeaturedList = styled.div`
 export const FeaturedItem = styled.div`
  margin-bottom: 40px;
  position: relative;
+ &:last-child {
+   margin-bottom: 0px;
+ }
 `
 export const FeaturedTitle = styled.div`
  position: relative;
  display: flex;
- margin-bottom: 16px;
+ margin-bottom: 10px;
  span, h3 {
   border-radius: 50px;
   padding: 0.5rem 1.2rem;
@@ -65,11 +73,10 @@ export const FeaturedTitle = styled.div`
  h3 {
   background: ${props => props.theme.paleRed};
   color: ${props => props.theme.darkBlue};
-  margin-left: -2rem;
   z-index: -1;
   position: absolute;
-  width: 100%;
-  left: 10%;
+  width: 100vw;
+  left: 0;
   padding-left: 4rem;
  }
 `
@@ -81,7 +88,48 @@ export const FeaturedText = styled.p`
 //Testimonial Section
 export const HomeTestimonialSection = styled.section`
   padding: 40px 0;
-  div {
-    color: #000;
+  text-align: center;
+  .quote-carousel {
+    overflow: visible;
+  }
+  .quote-slide {
+    background: ${props => props.theme.lightGray};
+    color: ${props => props.theme.textColor};
+    text-align: center;
+    position: relative;
+    padding: 0 20px 20px;
+    margin: 30px 0 40px;
+  }
+  .avatar-image {
+    position: relative;
+    top: -30px;
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+  p.name {
+    font-weight: 700;
+    color: ${props => props.theme.darkBlue};
+  }
+  .swiper-wrapper {
+    box-sizing: border-box;
+  }
+  .swiper-pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .swiper-pagination-bullet {
+      background: ${props => props.theme.paleRed};
+      border: 1px solid ${props => props.theme.brightRed};
+      opacity: 1;
+      transition: background-color 0.3s ease;
+      :hover {
+        background: ${props => props.theme.brightRed};
+      }
+    }
+    .swiper-pagination-bullet-active {
+      background: ${props => props.theme.brightRed};
+    }
   }
 `

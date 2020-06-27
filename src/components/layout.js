@@ -28,7 +28,7 @@ const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: 'Be Vietnam', sans-serif;
-    background: ${props => props.theme.lightGray};
+    background: #fff;
     color: ${props => props.theme.textColor};
     overscroll-behavior: none;
     overflow-x: hidden;

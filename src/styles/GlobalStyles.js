@@ -27,19 +27,19 @@ export const Flex = styled.div`
  `}
 `
 
-export const ButtonWrapper = styled.div`
+export const ButtonWrapper = styled.button`
  background: ${props => props.theme.brightRed};
  border-radius: 50px;
- padding: 0.9rem 2rem;
- box-shadow: 0px 10px 10px 6px ${props => props.theme.paleRed, 0.5};
+ border: none;
+ box-shadow: 0px 10px 10px 6px rgba(#FFEFEB, 0.15);
  display: inline-block;
- margin-top: 2rem;
+ margin-top: 2.4rem;
+ font-size: 13px;
+ font-weight: 700;
+ padding: 0.9rem 2rem;
+ cursor: pointer;
  a {
-  font-size: 13px;
-  font-weight: 700;
   color: ${props => props.theme.lightGray};
-  display: flex;
-  justify-content: center;
  }
 `
 
