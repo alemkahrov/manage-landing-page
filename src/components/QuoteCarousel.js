@@ -1,14 +1,16 @@
 import React from 'react'
-import { Container, ButtonWrapper } from '../styles/GlobalStyles'
+import { Container, StyledLink } from '../styles/GlobalStyles'
 import { HomeTestimonialSection } from '../styles/HomeStyles'
 import Swiper from 'react-id-swiper'
 import 'swiper/css/swiper.css'
 import { Link } from 'gatsby'
+import { StaticQuery, graphql } from "gatsby"
+import Img from 'gatsby-image'
 
-import avatar1 from '../images/avatar-anisha.png'
-import avatar2 from '../images/avatar-ali.png'
-import avatar3 from '../images/avatar-richard.png'
-import avatar4 from '../images/avatar-shanai.png'
+import avatar1 from '../images/avatar/avatar-anisha.png'
+// import avatar2 from '../images/avatar-ali.png'
+// import avatar3 from '../images/avatar-richard.png'
+// import avatar4 from '../images/avatar-shanai.png'
 import { SectionTitleWrapper } from './SectionTitle'
 
 
@@ -45,17 +47,19 @@ const QuoteCarouselConfigs = {
     clickable: true
   },
   breakpoints: {
-    1024: {
+    1280: {
       slidesPerView: 4,
       spaceBetween: 40
     },
+    1024: {
+      slidesPerView: 3
+    },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30
     },
     640: {
-      slidesPerView: 2,
-      spaceBetween: 20
+      slidesPerView: 1,
     },
     320: {
       slidesPerView: 1,
@@ -75,7 +79,7 @@ const QuoteCarousel = () => {
           {quotes.map(quoteItem => (
             <div className="quote-slide" key={quoteItem.id}>
               <div className="avatar-image">
-                <img src={avatar4} alt="" />
+                <img src={avatar1} alt="" />
               </div>
               <div className="quote-details">
                 <p className="name">{quoteItem.client}</p>
@@ -89,9 +93,9 @@ const QuoteCarousel = () => {
             </div>
           </div> */}
         </Swiper>
-        <ButtonWrapper>
-          <Link to="/Services">Get Started</Link>
-        </ButtonWrapper>
+        <StyledLink light>
+          <Link to="/Services" light>Get Started</Link>
+        </StyledLink>
       </Container>
     </HomeTestimonialSection>
   )

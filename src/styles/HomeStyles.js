@@ -3,18 +3,47 @@ import svgPattern from '../images/bg-tablet-pattern.svg'
 
 // Intro Section
 export const IntroWrapper = styled.section`
- position: relative;
- min-height: 100vh;
- margin: 100px 0 60px;
- 
+  position: relative;
+  min-height: 100vh;
+  margin: 100px 0 0;
+  background-image: url(${svgPattern});
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: 220% 100%;
+  padding: 60px 0px;
+  @media (min-width: 415px) {
+    background-image: none;
+  }
+  @media (min-width: 768px) {
+    min-height: 80vh;
+  }
+}
 `
 export const ImageWrapper = styled.div`
+@media (min-width: 768px) {
+  width: 50%;
+}
  img {
   width: 100%;
  }
 `
+export const IntroWrapperInner = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+`
 export const IntroTextWrapper = styled.div`
  text-align: center;
+ @media (min-width: 768px) {
+   text-align: left;
+   width: 45%;
+ }
+ @media (min-width: 1024px) {
+   width: 40%;
+ }
 `
 export const IntroTitle = styled.h1`
  font-size: 40px;
@@ -28,15 +57,6 @@ export const IntroSubTitle = styled.p`
  font-weight: 400;
  line-height: 1.8rem;
  letter-spacing: 0.5px;
-`
-export const IntroSVG = styled.div`
- img {
-  position: absolute;
-bottom: -50px;
-right: -30%;
-height: 260px;
-z-index: -1;
- }
 `
 
 // Featured Section

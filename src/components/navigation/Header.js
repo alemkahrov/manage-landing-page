@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { Container, Flex } from "../../styles/GlobalStyles"
+import { Container, Flex, StyledLink } from "../../styles/GlobalStyles"
 import { HeaderNav, StyledBurger } from "../../styles/HeaderStyles"
 // import { StyledBurger } from "../../styles/BurgerStyles"
 import DesktopNav from './DesktopNav'
@@ -8,6 +8,7 @@ import { Logo } from '../../svg/svg-icons'
 import { Link } from "gatsby"
 
 const Header = () => {
+
   const [showModal, setShowModal] = useState(false);
 
   const [background, setBackground] = useState(false);
@@ -30,6 +31,7 @@ const Header = () => {
   }, [])
 
   return (
+
     <HeaderNav background={background}>
       <Container>
         <Flex spaceBetween>
@@ -46,6 +48,12 @@ const Header = () => {
             </button>
           </StyledBurger>
           <DesktopNav />
+          {/* <StyledLink light nav>
+            <Link to="/" light>Get Started</Link>
+          </StyledLink> */}
+          <div className="nav-button">
+            <Link to="">Get Started</Link>
+          </div>
         </Flex>
         <ModalNav showModal={showModal} />
       </Container>

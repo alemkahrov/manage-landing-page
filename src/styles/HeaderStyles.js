@@ -22,11 +22,27 @@ export const HeaderNav = styled.header`
       }
     }
   }
+  .nav-button {
+    background: ${props => props.theme.brightRed};
+    border-radius: 50px;
+    border: none;
+    display: none;
+    font-size: 13px;
+    font-weight: 700;
+    padding: 0.9rem 2rem;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      display: block;
+    }
+    a {
+      color: ${props => props.theme.white};
+    }
+  }
 `
 
 export const Nav = styled.nav`
 display: none;
-  @media ${breakpoints.md} {
+  @media ${breakpoints.lg} {
     display: flex;
     align-self: flex-start;
     ul {
@@ -34,9 +50,16 @@ display: none;
       align-items: center;
       padding: 0;
       li {
-        a {
-
+        padding: 10px 0;
+        margin-left: 30px;
+        &:first-child {
+          margin-left: 0;
         }
+      }
+      a {
+        text-transform: capitalize;
+        color: ${props => props.theme.darkBlue};
+        font-weight: 700;
       }
     }
   }
@@ -46,7 +69,7 @@ export const StyledBurger = styled.div`
 display: flex;
 z-index: 20;
 position: relative;
- @media ${breakpoints.md} {
+ @media ${breakpoints.lg} {
   display: none;
  }
  button {

@@ -4,12 +4,19 @@ export const Container = styled.div`
  width: 90vw;
  max-width: 1400px;
  margin: 0 auto;
+ @media (min-width: 1024px) {
+  width: 80vw;
+ }
 `
 
 export const Flex = styled.div`
  display: flex;
  align-items: center;
-
+ ${props => props.flexRowReverse && css`
+   @media (min-width: 1024px) {
+    flex-direction: row-reverse;
+   }
+ `}
  ${props => props.alignTop && css`
   align-items: flex-start;
  `}
@@ -23,12 +30,13 @@ export const Flex = styled.div`
   justify-content: flex-end;
  `}
  ${props => props.flexColumn && css`
-  flex-direction: column;
+   flex-direction: column;
  `}
 `
 
-export const ButtonWrapper = styled.button`
- background: ${props => props.theme.brightRed};
+export const StyledLink = styled.a`
+ background: ${props => props.light ? "#F25F3A" : "#fff"};
+ color: ${props => props.light ? "#fff" : "#F25F3A"};
  border-radius: 50px;
  border: none;
  box-shadow: 0px 10px 10px 6px rgba(#FFEFEB, 0.15);
@@ -38,8 +46,8 @@ export const ButtonWrapper = styled.button`
  font-weight: 700;
  padding: 0.9rem 2rem;
  cursor: pointer;
- a {
-  color: ${props => props.theme.lightGray};
+ Link {
+  color: ${props => props.light ? "#fff" : "#F25F3A"};
  }
 `
 

@@ -15,7 +15,7 @@ export const Form = styled.form`
  }
  input {
   background: ${props => props.theme.lightGray};
-  width: 60%;
+  width: 75%;
   &::placeholder {
    color: ${props => props.theme.textColor};
   }

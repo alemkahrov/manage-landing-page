@@ -33,10 +33,22 @@ const GlobalStyle = createGlobalStyle`
     overscroll-behavior: none;
     overflow-x: hidden;
     background-image: url(${svgPattern});
-    background-size: contain;
+    background-size: 125%;
     background-repeat: no-repeat;
-    background-position: 70px -38px;
+    background-position: 56px -70px;
     position: relative;
+    @media (min-width: 768px) {
+      background-position: 500px -30px;
+      background-size: 60%;
+    }
+    @media (min-width: 1024px) {
+      background-position: 572px -195px;
+      background-size: 65%;
+    }
+    @media (min-width: 1399px) {
+      background-position: 775px -258px;
+      background-size: 60%;
+    }
   }
 
   h1, h2, h3, h4, h5, p {
@@ -74,6 +86,7 @@ const Layout = ({ children }) => {
     veryDarkBlue: '#1D1E25',
     paleRed: '#FFEFEB',
     lightGray: '#FAFAFA',
+    white: '#fff',
   }
 
   return (

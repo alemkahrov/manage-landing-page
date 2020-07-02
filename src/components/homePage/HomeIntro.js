@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Container, Flex, ButtonWrapper } from '../../styles/GlobalStyles'
-import { IntroWrapper, ImageWrapper, IntroTextWrapper, IntroTitle, IntroSubTitle, IntroSVG } from '../../styles/HomeStyles'
+import { Container, Flex, StyledLink } from '../../styles/GlobalStyles'
+import { IntroWrapper, IntroWrapperInner, ImageWrapper, IntroTextWrapper, IntroTitle, IntroSubTitle, IntroSVG } from '../../styles/HomeStyles'
 import introSVG from '../../images/illustration-intro.svg'
 // import svgPattern from '../../images/bg-tablet-pattern.svg'
 
@@ -14,7 +14,7 @@ const HomeIntro = () => {
     <img src={svgPattern} alt=""/>
    </IntroSVG> */}
    <Container>
-    <Flex flexColumn>
+    <IntroWrapperInner>
      <ImageWrapper>
       <img src={introSVG} alt="" />
      </ImageWrapper>
@@ -26,11 +26,11 @@ const HomeIntro = () => {
        Manage makes it simple for software teams to plan day-to-day
        tasks while keeping the larger team goals in view.
       </IntroSubTitle>
-      <ButtonWrapper>
-       <Link to="/Services">Get Started</Link>
-      </ButtonWrapper>
+      <StyledLink to="/" light>
+       Get Started
+      </StyledLink>
      </IntroTextWrapper>
-    </Flex>
+    </IntroWrapperInner>
    </Container>
   </IntroWrapper>
  )
