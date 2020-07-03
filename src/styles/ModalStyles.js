@@ -29,7 +29,7 @@ export const ModalContent = styled.div`
     }
     a {
       text-transform: capitalize;
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 700;
       color: ${props => props.theme.darkBlue};
     }

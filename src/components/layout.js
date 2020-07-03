@@ -38,16 +38,16 @@ const GlobalStyle = createGlobalStyle`
     background-position: 56px -70px;
     position: relative;
     @media (min-width: 768px) {
-      background-position: 500px -30px;
-      background-size: 60%;
+      background-position: 400px -100px;
+      background-size: 70%;
     }
     @media (min-width: 1024px) {
       background-position: 572px -195px;
       background-size: 65%;
     }
-    @media (min-width: 1399px) {
-      background-position: 775px -258px;
-      background-size: 60%;
+    @media (min-width: 1280px) {
+      background-position: 705px -160px;
+      background-size: 58%;
     }
   }
 
@@ -58,8 +58,11 @@ const GlobalStyle = createGlobalStyle`
   }
 
   p {
-  font-size: 13px;
-  line-height: 23px;
+  font-size: 14px;
+  line-height: 2.2;
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
  }
 
  ul {

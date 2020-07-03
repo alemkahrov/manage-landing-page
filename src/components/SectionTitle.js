@@ -1,14 +1,12 @@
 import styled from 'styled-components'
 
-export const SectionTitleWrapper = styled.div`
+export const SectionTitleWrapper = styled.h2`
  text-align: center;
- width: 78vw;
- margin: 0 auto;
  margin-bottom: 50px;
- h2 {
-  font-size: 22px;
-  line-height: 35px;
-  color: ${props => props.theme.darkBlue};
-  margin-bottom: 15px;
+ font-size: 28px;
+ line-height: 35px;
+ color: ${props => props.theme.darkBlue};
+ @media (min-width: 1024px) {
+  font-size: 34px;
  }
 `

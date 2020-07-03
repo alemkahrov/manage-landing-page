@@ -6,6 +6,7 @@ import 'swiper/css/swiper.css'
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from "gatsby"
 import Img from 'gatsby-image'
+import { svgDesktop } from '../svg/svg-icons'
 
 import avatar1 from '../images/avatar/avatar-anisha.png'
 // import avatar2 from '../images/avatar-ali.png'
@@ -47,12 +48,9 @@ const QuoteCarouselConfigs = {
     clickable: true
   },
   breakpoints: {
-    1280: {
-      slidesPerView: 4,
-      spaceBetween: 40
-    },
     1024: {
-      slidesPerView: 3
+      slidesPerView: 3,
+      spaceBetween: 40
     },
     768: {
       slidesPerView: 2,
@@ -73,7 +71,7 @@ const QuoteCarousel = () => {
     <HomeTestimonialSection>
       <Container>
         <SectionTitleWrapper>
-          <h2>What they’ve said</h2>
+          What they’ve said
         </SectionTitleWrapper>
         <Swiper {...QuoteCarouselConfigs}>
           {quotes.map(quoteItem => (
@@ -93,8 +91,8 @@ const QuoteCarousel = () => {
             </div>
           </div> */}
         </Swiper>
-        <StyledLink light>
-          <Link to="/Services" light>Get Started</Link>
+        <StyledLink light mainButton>
+          Get Started
         </StyledLink>
       </Container>
     </HomeTestimonialSection>

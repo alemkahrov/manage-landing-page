@@ -4,24 +4,23 @@ import svgPattern from '../images/bg-tablet-pattern.svg'
 // Intro Section
 export const IntroWrapper = styled.section`
   position: relative;
-  min-height: 100vh;
-  margin: 100px 0 0;
+  min-height: 80vh;
+  margin: 90px 0 0;
   background-image: url(${svgPattern});
   background-size: 70%;
   background-repeat: no-repeat;
-  background-position: 220% 100%;
-  padding: 60px 0px;
+  background-position: 210% 100%;
+  padding-bottom: 70px;
   @media (min-width: 415px) {
     background-image: none;
   }
   @media (min-width: 768px) {
-    min-height: 80vh;
+    padding-top: 70px;
   }
-}
 `
 export const ImageWrapper = styled.div`
 @media (min-width: 768px) {
-  width: 50%;
+  width: 52%;
 }
  img {
   width: 100%;
@@ -46,28 +45,81 @@ export const IntroTextWrapper = styled.div`
  }
 `
 export const IntroTitle = styled.h1`
- font-size: 40px;
+ font-size: 38px;
  font-weight: 700;
  line-height: 3.2rem;
- margin-bottom: 5px;
+ margin-bottom: 15px;
  color: ${props => props.theme.darkBlue};
+ @media (min-width: 1024px) {
+   font-size: 46px;
+ }
 `
 export const IntroSubTitle = styled.p`
  font-size: 16px;
  font-weight: 400;
  line-height: 1.8rem;
  letter-spacing: 0.5px;
+ @media (min-width: 1024px) {
+   font-size: 18px;
+ }
 `
 
 // Featured Section
 export const HomeFeaturedSection = styled.section`
  position: relative;
- /* background-image: url(${svgPattern});
-  background-size: contain;
-  background-repeat: no-repeat; */
+ .svg-pattern {
+   position: absolute;
+   display: none;
+   @media (min-width: 1024px) {  
+      bottom: -70%;
+      left: -40%;
+      display: block;
+      z-index: -1;
+   }
+ }
+`
+export const HomeFeaturedInner = styled.div`
+  .section-title-wrapper {
+    text-align: center;
+    width: 80vw;
+    margin: 0 auto 50px auto;
+    @media (min-width: 768px) {
+      width: 45%;
+      text-align: left;
+      margin: 0 0 50px 0;
+    }
+    h2 {
+      font-size: 28px;
+      line-height: 35px;
+      max-width: 240px;
+      margin-bottom: 15px;
+      margin: 0 auto 15px auto;
+      color: ${props => props.theme.darkBlue};
+      @media (min-width: 768px) {
+        max-width: 360px;
+        margin: 0 0 15px;
+      }
+      @media (min-width: 1024px) {
+        font-size: 34px;
+        max-width: 390px;
+      }
+    }
+    p.subtitle {
+        @media (min-width: 768px) {
+          max-width: 330px;
+        }
+      }
+  }
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
 `
 export const FeaturedList = styled.div`
  position: relative;
+ @media (min-width: 768px) {
+   width: 50%;
+ }
 `
 export const FeaturedItem = styled.div`
  margin-bottom: 40px;
@@ -84,7 +136,10 @@ export const FeaturedTitle = styled.div`
   border-radius: 50px;
   padding: 0.5rem 1.2rem;
   font-weight: 700;
-  font-size: 13px;
+  font-size: 14px;
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
  }
  span {
   background: ${props => props.theme.brightRed};
@@ -97,18 +152,27 @@ export const FeaturedTitle = styled.div`
   position: absolute;
   width: 100vw;
   left: 0;
-  padding-left: 4rem;
+  padding-left: 4.5rem;
+  @media (min-width: 768px) {
+    background: none;
+  }
  }
 `
 export const FeaturedText = styled.p`
- font-size: 13px;
  color: ${props => props.theme.textColor};
+ @media (min-width: 768px) {
+   padding-left: 4.5rem;
+ }
 `
 
 //Testimonial Section
 export const HomeTestimonialSection = styled.section`
-  padding: 40px 0;
+  padding: 60px 0;
   text-align: center;
+  @media (min-width: 768px) {
+    padding: 100px 0;
+  }
+  
   .quote-carousel {
     overflow: visible;
   }

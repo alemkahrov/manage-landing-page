@@ -31,6 +31,9 @@ export const Flex = styled.div`
  `}
  ${props => props.flexColumn && css`
    flex-direction: column;
+   @media (min-width: 768px) {
+     flex-direction: row;
+   }
  `}
 `
 
@@ -41,7 +44,7 @@ export const StyledLink = styled.a`
  border: none;
  box-shadow: 0px 10px 10px 6px rgba(#FFEFEB, 0.15);
  display: inline-block;
- margin-top: 2.4rem;
+ margin-top: ${props => props.mainButton ? "2.4rem" : "0"};
  font-size: 13px;
  font-weight: 700;
  padding: 0.9rem 2rem;
@@ -53,15 +56,15 @@ export const StyledLink = styled.a`
 
 //Tailwind breakpoints
 const size = {
- sm: '640px',
- md: '768px',
- lg: '1024px',
- xl: '1280px'
+  sm: '640px',
+  md: '768px',
+  lg: '1024px',
+  xl: '1280px'
 }
 
 export const breakpoints = {
- sm: `(min-width: ${size.sm})`,
- md: `(min-width: ${size.md})`,
- lg: `(min-width: ${size.lg})`,
- xl: `(min-width: ${size.xl})`
+  sm: `(min-width: ${size.sm})`,
+  md: `(min-width: ${size.md})`,
+  lg: `(min-width: ${size.lg})`,
+  xl: `(min-width: ${size.xl})`
 }
